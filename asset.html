@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Html5 Starter File</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="css/anythingslider.css">
+	<script src="js/jquery.anythingslider.js"></script>
+	<link rel="stylesheet" href="css/theme-minimalist-square.css">
+	<script>
+	$(function(){
+		$('#slider').anythingSlider({
+		 	resizeContents:false,
+		 	buildNavigation:true,
+		 	buildStartStop:false,
+			autoplay:true,
+			appendForwardTo: $('.image-thumbs-right'),
+			appendBackTo: $('.image-thumbs-left'),
+			appendNavigationTo: $('.image-thumbs-middle center'),
+			navigationFormatter : function(index, panel){ // Format navigation labels with text
+		      return ['Desktop', 'iPhone 5'][index - 1];
+		    }
+		}); // add any non-default options here
+	});
+	</script>
+</head>
+
+<body>
+
+    <div id="content">
+		<div id="asset-title">
+			<img src="images/facebooklogo.jpg" />
+			Photo Post
+		</div>
+
+		<div id="homebutton"><a href="index.html">Home</a></div>
+
+		<div class="image-hero">
+
+			<div id="slider-wrap">
+				<div id="slider">
+					<div><img src="images/fbimagepost_desktop.png" title="test" /></div>
+					<div><img src="images/fbimagepost_iphone5.png" title="test2" /></div>
+				</div>
+			</div>
+
+		</div>
+		
+        <div class="specs-column">
+			
+			<h1>Information:</h1>
+			This has the exact same specs as .CO.NZ carousel, but has an
+	additional overlay box on the right to be aware of. Please
+	consider the context that someone has just logged out of
+	FNC – don’t treat them the same as a prospective customer
+	browsing the Personal section. 
+			
+			<h2>Specs:</h2>
+			
+			<ul>
+				<li><span class="bullet">-</span><b>Dimensions:</b> 300x627px</li>
+				<li><span class="bullet">-</span><b>Max Filesize:</b> 15kB MAX</li>
+				<li><span class="bullet">-</span><b>Format:</b> JPEG<li>
+			</ul>
+			
+			<h2>Copy Specs:</h2>
+			
+			<ul>
+				<li><span class="bullet">-</span><b>Char Limit:</b> 300 (including spaces)</li>
+			</ul>
+			
+			<br class="clear">
+
+        </div>
+			<div class="image-thumbs-left"></div>
+			<div class="image-thumbs-middle">
+				<center>
+					<!-- Slider Nav -->
+				</center>
+			</div>
+			<div class="image-thumbs-right"></div>
+    </div>
+
+    <div class="“clear”"></div>
+
+</body>
+</html>
